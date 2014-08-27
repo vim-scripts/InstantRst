@@ -1,40 +1,86 @@
 InstantRst
 ===========
 
-It's a webserver and vim plugin for you to preview rst instantly,
+:version: 0.96
 
-Kind of thing like instan-markdown-d_, 
+..
 
-But for reStructuredText and using python.
+    So, You'll see.
 
-And it's using sofish's typo.css_ for better layout.
+    -- InstantRst
 
-Install:
+
+A server and a plugin for preview rst document instantly.
+
+A screencast with Riv.vim_ and InstantRst_
+
+.. image:: https://github.com/Rykka/riv.vim/raw/master/intro.gif
+
+The theme is http://rykka.github.io/rhythm.css/
+
+This is an intro for vim usage. To use the server, see instant-rst.py_.
+
+Install
+-------
+
+1. Vim with Vundle or NeoBundle:
+
+   ``NeoBundle 'Rykka/InstantRst'``
+
+2. Python:
+
+.. code:: sh
+
+   # Got some issue on pypi
+   # sudo pip install instant-rst
+   sudo pip install https://github.com/Rykka/instant-rst.py/archive/master.zip
+
+3. Curl:
+
+.. code:: sh
+
+   sudo apt-get install curl
+
+Commands
 --------
 
-1. Vundle `Rykka/InstantRst`
-2. Python: `pip install flask flask-socketio docutils pygments`
-
-Usage
------
-
-In a rst buffer:
-
-Use ``:InstantRst`` to preview current buffer.
-
-Use ``:StopInstantRst`` to stop Preview current buffer
-
-You should open a browser at http://localhost:5676
-
-**Options:**
-
-    `g:instant_rst_slow`: preview rst fast or slow, default is 0.
-    `g:instant_rst_browser`: preview rst with browser. default is ''.
+Inside a rst buffer.
 
 
-And you can start the server by your self. which is ``after/ftplugin/rst/instantRst.py``
+:InstantRst[!]
+    Preview current buffer.
+    Add ``!`` to  preview **ALL** rst buffer.
 
-with command ``python /path/to/instantRst.py``
+:StopInstantRst[!]
+    Stop Preview current buffer
+    Add ``!`` to  stop preview **ALL** rst buffer.
+
+
+Options
+-------
+
+g:instant_rst_slow
+    Preview rst in fast or slow mode, default is ``0``.
+    If your computer is a bit slow, set it to 1.
+
+g:instant_rst_browser 
+    Web browser for preview. default is ``''``.
+    And then ``firefox`` will be used.
+
+g:instant_rst_port
+    The port of webserver, default is ``5676``.
+
+    Then the server is at http://localhost:5676
+
+g:instant_rst_forever 
+    Always preview all rst buffer, default is ``0``.
+
+g:instant_rst_bind_scroll
+    Bind scroll with browser.
+
+    When scrolling with Vim, The browser will scroll either.
+
+    default is ``1``
 
 TODO
 ----
@@ -44,10 +90,16 @@ TODO
 Related
 -------
 
-You can use Riv.vim_ to write your rst documents.
+This plugin is for Riv.vim_.
 
-.. _instan-markdown-d: https://github.com/suan/instant-markdown-d
+which is vim plugin for writing rst documents.
 
+License
+-------
+
+MIT
+
+.. sectnum::
 .. _Riv.vim: https://github.com/Rykka/riv.vim
-
 .. _typo.css: https://github.com/sofish/Typo.css
+.. _instant-rst.py: https://github.com/rykka/instant-rst.py

@@ -1,5 +1,13 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=4999
 
-It's a webserver and vim plugin for you to preview rst instantly.
+A vim plugin for preview rst document instantly.
 
-See details in github: https://github.com/Rykka/InstantRst
+github: https://github.com/Rykka/InstantRst
+
+.. figure:: https://github.com/Rykka/github_things/raw/master/image/rst_quick_start.gif 
+
+This is an intro for vim usage.
+To use the server, see instant-rst.py_.
+
+.. _instant-rst.py: https://github.com/rykka/instant-rst.py
+
